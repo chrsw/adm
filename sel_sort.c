@@ -1,9 +1,8 @@
 // sel_sort.c
 // Selection sort based on the example from The Algorithm Design Manual
 
-#include <stdio.h>
-
 void swap(char *, char *);
+
 static void selection_sort(char s[], int n) {
 
         int i, j;       // counters
@@ -14,17 +13,14 @@ static void selection_sort(char s[], int n) {
         // portion.
         for (i = 0; i < n; i++) {
                 for (j = i, min = i; j < n; j++) {
-                        if (s[j] < s[min]) {
-                                min = j;
-                                // min now is the index
-                                // of the smallest value
-                        }
+                        if (s[j] < s[min]) min = j;
                 }                
                 swap(&s[i], &s[min]);
         }
 
 }
 
+// Test driver
 int main(void) {
 
         char s[] = "INSERTION";
@@ -32,7 +28,7 @@ int main(void) {
         return 0;
 }
 
-
+// Swap two values
 void swap(char *x, char *y) {
 
         char temp = *y;
