@@ -4,13 +4,13 @@
 file sel_sort
 
 # Put breakpoints around the selection sort function to observe the results
-break sel_sort.c:31
-break sel_sort.c:32
+break sel_sort.c:27
+break sel_sort.c:28
 
 # Run the program
 r
 
-# Show the critical data
+# Show the sorted data and unsorted data
 p s
 c
 p s
